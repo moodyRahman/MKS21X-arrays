@@ -83,15 +83,19 @@ public class ArrayDemo{
 
 
   public static void main(String[] args){
-      fill2D(new int [][]{{3, 4, 5}, {4, 5, 21}, {3, 3, 3}});
-      newLine();
-      printArray(fill2DCopy(new int[][] {{3, 4, 5},{2, -1},{0, 0, -4, 5, 6, 3}}));
-      newLine();
-      printArray(new int[] {3, 4, 5});
-      newLine();
-      printArray(new int[][] {{0, 1, 2},{3, 4, 5},{6, 7, 8}});
-      newLine();
-      System.out.print(countZeros2D(new int[][] {{0, 3, 4}, {0, 0, 1}, {4, 5, 0}}));
+    int[] dim1 = {3, 4, 0, -1. 234, 5};
+    int[][] dim2 = {{2, 4, -3, 1,66},{8, -4, 2, -1, 7, 3},{0, 0, 0, 0, 0},{10, 124, 566, -2341}};
+
+
+    fill2D(new int [][]{{3, 4, 5}, {4, 5, 21}, {3, 3, 3}});
+    newLine();
+    printArray(fill2DCopy(new int[][] {{3, 4, 5},{2, -1},{0, 0, -4, 5, 6, 3}}));
+    newLine();
+    printArray(new int[] {3, 4, 5});
+    newLine();
+    printArray(new int[][] {{0, 1, 2},{3, 4, 5},{6, 7, 8}});
+    newLine();
+    System.out.print(countZeros2D(new int[][] {{0, 3, 4}, {0, 0, 1}, {4, 5, 0}}));
 
   }
 
