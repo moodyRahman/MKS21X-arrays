@@ -47,21 +47,18 @@ public class ArrayDemo{
   }
 
   public static int[][] fill2DCopy(int[][] vals){
-    int[][] output;
-    output = new int[vals.length] [];
-
-    for(int x = 0; x < output.length; x++){
-      output = new int [vals.length][vals[x].length];
+    int [][] output;
+    output = new int[vals.length][];
+    for( int x = 0; x < vals.length;x++){
+      output[x] = new int[vals[x].length];
     }
-
     return output;
-
   }
 
 
   public static void main(String[] args){
 //    fill2D(new int [][]{{3, 4, 5}, {4, 5, 21}, {3, 3, 3}});
-      printArray(new int[][] {{3},{4, 5, 66},{3, 2}});
+      printArray(fill2DCopy(new int[][] {{3, 4, 5},{2, 1},{0, 0, 4, 5, 6, 3}}));
 //    printArray(new int[] {3, 4, 5});
 //    printArray(new int[][] {{0, 1, 2},{3, 4, 5},{6, 7, 8}});
 //    System.out.print(countZeros2D(new int[][] {{0, 3, 4}, {0, 0, 1}, {4, 5, 0}}));
