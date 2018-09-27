@@ -98,9 +98,6 @@ public class ArrayDemo{
     newLine();
     printArray(dim2);
     newLine();
-    System.out.println(countZeros2D(dim2));
-
+    System.out.println(countZeros2D(dim2alt));
   }
-
-
 }
