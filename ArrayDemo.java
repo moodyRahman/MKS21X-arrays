@@ -28,12 +28,29 @@ public class ArrayDemo{
     return output;
   }
 
+  public static void fill2D(int[][] vals){
+    for( int x = 0; x < vals.length; x++){
+      for( int y = 0; y < vals[x].length;y++){
+        vals[x][y] = 1;
+        if(x == y){
+          vals[x][y] = 3;
+        }
+        System.out.print(vals[x][y] + ", ");
+        if(y == 2){
+          System.out.print("\n");
+        }
+      }
+    }
+  }
+
 
   public static void main(String[] args){
+    fill2D(new int [][]{{3, 4, 5}, {4, 5, 21}, {3, 3, 3}});
 
-    printArray(new int[] {3, 4, 5});
-    printArray(new int[][] {{0, 1, 2},{3, 4, 5},{6, 7, 8}});
-    System.out.print(countZeros2D(new int[][] {{0, 3, 4}, {0, 0, 1}, {4, 5, 0}}));
+//    printArray(new int[] {3, 4, 5});
+//    printArray(new int[][] {{0, 1, 2},{3, 4, 5},{6, 7, 8}});
+//    System.out.print(countZeros2D(new int[][] {{0, 3, 4}, {0, 0, 1}, {4, 5, 0}}));
+
   }
 
 
