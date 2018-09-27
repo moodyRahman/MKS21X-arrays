@@ -1,5 +1,6 @@
 public class ArrayDemo{
 
+
   public static void printArray(int[] array){
     for( int x = 0; x < array.length; x++){
       System.out.print(array[x] + ", ");
@@ -7,17 +8,21 @@ public class ArrayDemo{
     System.out.print("\n");
   }
 
+
+
   public static void printArray(int[][] array){
     for( int x = 0; x < array.length; x++){
       for( int y = 0; y < array[x].length;y++){
         System.out.print(array[x][y] + ", ");
         if(y == array[x].length -1){
-          System.out.print("\n");
-        }
+          System.out.print("\n");      //helps with formatting
+        }                             // new line at the end of each "mini array"
       }
     }
     System.out.print("\n");
   }
+
+
 
   public static int countZeros2D(int[][] array){
     int output = 0;
@@ -30,6 +35,8 @@ public class ArrayDemo{
     }
     return output;
   }
+
+
 
   public static void fill2D(int[][] vals){
     for( int x = 0; x < vals.length; x++){
@@ -45,6 +52,8 @@ public class ArrayDemo{
       }
     }
   }
+
+
 
   public static int[][] fill2DCopy(int[][] vals){
     int [][] output;
@@ -66,12 +75,23 @@ public class ArrayDemo{
   }
 
 
+
+  public static void newLine(){
+    System.out.print("-------------\n");
+  }
+
+
+
   public static void main(String[] args){
-//    fill2D(new int [][]{{3, 4, 5}, {4, 5, 21}, {3, 3, 3}});
+      fill2D(new int [][]{{3, 4, 5}, {4, 5, 21}, {3, 3, 3}});
+      newLine();
       printArray(fill2DCopy(new int[][] {{3, 4, 5},{2, -1},{0, 0, -4, 5, 6, 3}}));
-//    printArray(new int[] {3, 4, 5});
-//    printArray(new int[][] {{0, 1, 2},{3, 4, 5},{6, 7, 8}});
-//    System.out.print(countZeros2D(new int[][] {{0, 3, 4}, {0, 0, 1}, {4, 5, 0}}));
+      newLine();
+      printArray(new int[] {3, 4, 5});
+      newLine();
+      printArray(new int[][] {{0, 1, 2},{3, 4, 5},{6, 7, 8}});
+      newLine();
+      System.out.print(countZeros2D(new int[][] {{0, 3, 4}, {0, 0, 1}, {4, 5, 0}}));
 
   }
 
