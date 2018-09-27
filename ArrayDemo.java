@@ -52,13 +52,23 @@ public class ArrayDemo{
     for( int x = 0; x < vals.length;x++){
       output[x] = new int[vals[x].length];
     }
+
+    for( int x = 0; x < vals.length; x++){
+      for(int y = 0; y < vals[x].length; y++){
+        output [x][y] = 1;
+        if( vals[x][y] < 0){
+          output [x][y] = 3;
+        }
+      }
+    }
+
     return output;
   }
 
 
   public static void main(String[] args){
 //    fill2D(new int [][]{{3, 4, 5}, {4, 5, 21}, {3, 3, 3}});
-      printArray(fill2DCopy(new int[][] {{3, 4, 5},{2, 1},{0, 0, 4, 5, 6, 3}}));
+      printArray(fill2DCopy(new int[][] {{3, 4, 5},{2, -1},{0, 0, -4, 5, 6, 3}}));
 //    printArray(new int[] {3, 4, 5});
 //    printArray(new int[][] {{0, 1, 2},{3, 4, 5},{6, 7, 8}});
 //    System.out.print(countZeros2D(new int[][] {{0, 3, 4}, {0, 0, 1}, {4, 5, 0}}));
